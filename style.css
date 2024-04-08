@@ -27,7 +27,7 @@ body {
 
 #container {
   width: 85%;
-  height: 75%;
+  height: 30rem;
   max-width: 780px;
   background-color: #fff;
   padding: 5rem 2rem 2rem;
@@ -38,36 +38,26 @@ body {
 #woman--online-mobile {
   position: absolute;
   width: 70%;
-  top: -21.5%;
+  top: -21%;
   left: 3rem;
 }
 
 #woman--online-desktop {
-  height: 100%;
-  align-self: center;
-  justify-self: center;
-  margin-top: 1rem;
-  margin-left: -2.5rem;
   display: none;
 }
 
 #illustration--box {
-  width: 10rem;
-  position: absolute;
-  left: -6em;
-  top: 40%;
   display: none;
 }
 
 #second__inner--container {
   width: 100%;
-  height: 100%;
   align-items: center;
   overflow: hidden;
 }
 
 #faq--label {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   letter-spacing: 1.8;
   font-size: 3em;
   font-weight: 700;
@@ -86,7 +76,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  user-select: none;
+  /* user-select: none; */
 }
 
 .question {
@@ -107,7 +97,7 @@ body {
 }
 
 .question-row.open + .fa--arrow {
-  transform: rotateX(-180deg);
+  transform: rotateX(180deg);
 }
 
 .question:hover {
@@ -133,6 +123,10 @@ body {
   align-self: center;
 }
 
+.rotated {
+  transform: rotate(180deg);
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -141,58 +135,63 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
-/* @media (max-width: 768px) {
-  #woman--online {
-    height: 80%;
+@media (min-width: 400px) {
+  #woman--online-mobile {
+    top: -23%;
+    left: 3.6rem;
   }
-  #first__inner--container {
-  height: 100%;
-  background-image: url(images/bg-pattern-desktop.svg);
-  background-repeat: no-repeat;
-  background-size: contain;
-}
 }
 
-@media (max-width: 668px) {
+@media (min-width: 500px) {
+  #woman--online-mobile {
+    top: -30%;
+    left: 4rem;
+  }
+  #faq--label {
+    margin: 1.5rem 0;
+  }
+}
+
+@media (min-width: 700px) {
   #container {
-    width: 80%;
-    height: 100%;
-    max-width: 780px;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 1rem 3rem;
-    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0 0;
+    position: relative;
   }
-
   #first__inner--container {
-    padding-bottom: 2rem;
-    width: 100%;
-    min-height: 50%;
-    background-image: url(images/bg-pattern-mobile.svg);
-    background-repeat: no-repeat;
+    flex-basis: 50%;
+    background: url(./images/bg-pattern-desktop.svg);
     background-size: contain;
-    align-items: center;
+    background-position-y: 55%;
+    background-repeat: no-repeat;
+    padding: 4rem 0;
   }
-
-  #woman--online-desktop,
-  #illustration--box {
+  #second__inner--container {
+    flex-basis: 45%;
+    padding: 2rem 0;
+  }
+  #woman--online-mobile {
     display: none;
   }
-
-  #woman--online-mobile {
+  #woman--online-desktop {
     display: block;
-    width: 80%;
-    margin: -35% auto 0;
-  } */
-/* 
-  #second__inner--container {
     width: 100%;
-    margin-left: 0;
-    overflow: auto;
+    margin-left: -10%;
+    overflow: hidden;
   }
-
+  #illustration--box {
+    width: 10rem;
+    position: absolute;
+    left: -7em;
+    top: 38%;
+    display: block;
+  }
+  .accordion {
+    padding: 1rem 0;
+  }
   #faq--label {
-    text-align: center;
-    margin-top: 1rem;
+    text-align: left;
+    font-size: 2rem;
   }
-} */
+}
